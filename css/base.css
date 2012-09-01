@@ -71,8 +71,20 @@ body {
     float: left;
     display: none;
 }
-#content{
+#content {
     margin-top: 0px;
+}
+footer {
+    border-top: 1px solid #333;
+}
+footer .copyright {
+    float: left;
+}
+footer .twitter {
+    float: right;
+}
+a {
+    color: #333;
 }
 .post h2 {
     background: #ede5e5;
