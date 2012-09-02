@@ -7,7 +7,6 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         var toTop = $(window).scrollTop();
-        
         if ($("body").height() > $(window).height()) {
 
             //scrolling down, and not snaping back
