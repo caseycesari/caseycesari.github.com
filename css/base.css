@@ -10,18 +10,18 @@ body {
 }
 #header {
     overflow: hidden;
-    background: 300px 30px #fff url(../img/back.png) no-repeat;
+    background: -50px 0px #fff url(../img/streets.png) no-repeat;
     margin: 0;
     padding: 0;
-    height: 230px;
+    height: 250px;
 }
 #header h1 {
-    font-size: 3em;
+    font-size: 1.7em;
     color: #333;
-    margin: 10px 0px;
+    margin: 50px 20px 0px 10px;
 }
 #header h3 {
-    margin: 5px 0px;
+    margin: 0px 10px;
 }
 #nav {
     position: fixed;
@@ -37,6 +37,8 @@ body {
 #nav ul {
     float: right;
     list-style-type: none;
+    margin: 0px;
+    padding: 0px;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
@@ -62,7 +64,8 @@ body {
     min-width: 90px;
     padding: 5px 5px 0px 5px;
     border-radius: 4px;
-    background: #4f8c9e;
+    background: #41717f;
+    border: 1px solid #333;
 }
 #nav h1.nav-title {
     font-size: 2.0em;
@@ -86,8 +89,32 @@ footer .twitter {
 a {
     color: #333;
 }
+p {
+    line-height: 1.6em;
+}
+iframe {
+    border: none;
+}
+.post header {
+    background: #e9ec99;
+    border: 1px solid #333;
+    border-left: 0px;
+    border-right: 0px;
+}
 .post h2 {
-    background: #ede5e5;
     padding: 10px;
     margin: 0px;
+    display: inline-block;
+}
+.post h2 a {
+    text-decoration: none;
+}
+.post .date {
+    display: inline-block;
+    font-size: 1.1em;
+    float: right;
+    color: #444;
+    background-color: whiteSmoke;
+    padding: 16px 10px 15px 10px;
+    float: right;
 }
