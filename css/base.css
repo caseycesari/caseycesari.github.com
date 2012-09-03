@@ -121,7 +121,7 @@ iframe {
     margin-bottom: 30px;
 }
 .post div {
-    padding: 5px;
+    padding: 2px;
 }
 .post header {
     background: #ffe581;
@@ -210,9 +210,6 @@ iframe {
         font-size: 1.1em;
         padding: 6px 4px;
     }
-    .post p {
-        padding: 10px;
-    }
 }
 
 @media all and (max-width: 400px) {
@@ -237,6 +234,9 @@ iframe {
         padding: 5px 5px 0px 5px; 
     }
     .post div {
-        padding: 10px;
+        padding: 2px;
+    }
+    .post {
+        font-size: 14px;
     }
 }
