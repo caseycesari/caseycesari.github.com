@@ -31,6 +31,7 @@ html, body {
 }
 #nav {
     position: fixed;
+    z-index: 999;
     top: 150px;
     width: 800px;
     text-transform: uppercase;
