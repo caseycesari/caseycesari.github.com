@@ -120,6 +120,9 @@ iframe {
 .post {
     margin-bottom: 30px;
 }
+.post div {
+    padding: 5px;
+}
 .post header {
     background: #ffe581;
     border: 1px solid #333;
@@ -230,7 +233,7 @@ iframe {
         min-width: 60px;
         padding: 5px 5px 0px 5px; 
     }
-    .post p {
+    .post div {
         padding: 10px;
     }
 }
