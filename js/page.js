@@ -5,11 +5,18 @@ $(document).ready(function(){
         navToTop = 150,
         $title = $('.nav-title');
 
+    // initial check
+    if ($(window).scrollTop() > navToTop) {
+        $nav.css('top', 0);
+        $title.show();
+        $nav.addClass("scroll")
+    }
+
     $(window).scroll(function(){
         var toTop = $(window).scrollTop();
         if ($("body").height() > $(window).height()) {
 
-            //scrolling down, and not snaping back
+            // scrolling down, and not snaping back
             if (prevToTop < toTop && toTop >= 0) {
                 if (toTop <= navToTop) {
                     $nav.css('top', navToTop - toTop);
@@ -18,7 +25,7 @@ $(document).ready(function(){
                     $title.show();
                     $nav.addClass("scroll")
                 }
-            //scrolling up
+            // scrolling up
             } else if (prevToTop > toTop) {
                 if (toTop < navToTop && toTop >= 0)  {
                     $nav.css('top', navToTop - toTop);
