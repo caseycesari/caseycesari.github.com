@@ -7,7 +7,8 @@ Following his win in the Democratic primary for Pennslyvania's 182nd legislative
 
 Sims received 180 out-of-state contributions, totaling $50,665. The most notable amount of out-of-state contributions come from Washington, D.C, which total $23,675. Pennsylvania residents donated $98,999 to Sims. In comparison, the Committee to Elect Babette Josephs received seven out-of-state contributions, totaling $5,750. Josephs' PAC raised $26,625 in total for this election, compared to Sims' $149,664. 
 
-<iframe src="http://maps.caseypthomas.org/sims4papac/index.html" width="100%" height="950px"> </iframe>
-See the Inquirer [article](http://www.philly.com/philly/news/pennsylvania/20120426_Gay_community_applauds_Brian_Sims__win_for_state_House.html) for more. 
+{% include sims-maps.html %}
+
+See the Inquirer [article](http://www.philly.com/philly/news/pennsylvania/20120426_Gay_community_applauds_Brian_Sims__win_for_state_House.html) for more.
 
 Campaign finance data for Pennsylvania is available [online](https://www.campaignfinanceonline.state.pa.us/Pages/CampaignFinanceHome.aspx).
