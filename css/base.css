@@ -1,22 +1,21 @@
 body {
     color: #555;
-    margin: 0;
-    padding: 0;
-    font: normal 120% 'Open Sans', Helvetica, sans-serif; 
+    font: normal 110% 'Open Sans', Helvetica, sans-serif; 
 }
 #page {
-    width: 60%;
+    max-width: 800px;
     margin: 0 auto;
 }
 #header {
     overflow: hidden;
-    background: -50px 0px #fff url(../img/streets.png) no-repeat;
+    background: 200px 0px #fff url() no-repeat;
+    background-size: 70%;
     margin: 0;
     padding: 0;
     height: 250px;
 }
 #header h1 {
-    font-size: 1.7em;
+    font-size: 3em;
     color: #333;
     margin: 50px 20px 0px 10px;
 }
@@ -26,7 +25,7 @@ body {
 #nav {
     position: fixed;
     top: 150px;
-    width: 60%;
+    width: 800px;
     text-transform: uppercase;
 }
 #nav.scroll {
@@ -89,14 +88,20 @@ footer .twitter {
 a {
     color: #333;
 }
+a:hover {
+    color: #111;
+}
 p {
     line-height: 1.6em;
 }
 iframe {
     border: none;
 }
+.post {
+    margin-bottom: 30px;
+}
 .post header {
-    background: #e9ec99;
+    background: #ffe581;
     border: 1px solid #333;
     border-left: 0px;
     border-right: 0px;
@@ -115,6 +120,11 @@ iframe {
     float: right;
     color: #444;
     background-color: whiteSmoke;
-    padding: 16px 10px 15px 10px;
+    padding: 15px 10px;
     float: right;
+}
+
+.post img {
+    display: block;
+    margin: 0 auto;
 }
