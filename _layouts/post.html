@@ -5,9 +5,9 @@ layout: default
   <div class="post">
     <header>
       <h2>{{ page.title }}</h2>
-      <span class="date">{{ page.date | date: "%m/%d/%Y" }}</span>
+      <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
     </header>
-    <span class="inline-date">{{ page.date | date: "%A, %B %d, %Y" }}</span>
+    <span class="inline-date">{{ page.date | date: "%B %d, %Y" }}</span>
     <div>{{ content }}</div>
   </div>
 </article>

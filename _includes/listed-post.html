@@ -2,9 +2,9 @@
   <div class="post">
     <header>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <span class="date">{{ post.date | date: "%A, %B %d, %Y" }}</span>
+      <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
     </header>
-    <span class="inline-date">{{ post.date | date: "%A, %B %d, %Y" }}</span>
+    <span class="inline-date">{{ post.date | date: "%B %d, %Y" }}</span>
     <div>{{ post.content }}</div>
   </div>
 </article>
