@@ -1,6 +1,9 @@
-body {
+html, body {
     color: #555;
     font: normal 110% 'Open Sans', Helvetica, sans-serif; 
+    margin:0; 
+    padding:0;
+    width: 100%;
 }
 #page {
     max-width: 800px;
@@ -13,11 +16,15 @@ body {
     margin: 0;
     padding: 0;
     height: 250px;
+    width: 100%;
 }
 #header h1 {
     font-size: 3em;
     color: #333;
     margin: 50px 20px 0px 10px;
+}
+#header h1 a {
+    text-decoration: none;
 }
 #header h3 {
     margin: 0px 10px;
@@ -48,7 +55,7 @@ body {
     display: inline-block;
     height: 30px;
     padding: 12px;
-    margin-top: 10px;
+    margin-top: 6px;
     text-align: center;
 }
 #nav li:hover {
@@ -94,6 +101,11 @@ a:hover {
 p {
     line-height: 1.6em;
 }
+.iframe-container {
+    max-width: auto;
+    height: auto;
+    overflow:auto;
+}
 iframe {
     border: none;
 }
@@ -107,6 +119,7 @@ iframe {
     border-right: 0px;
 }
 .post h2 {
+    font-size: 1.3em;
     padding: 10px;
     margin: 0px;
     display: inline-block;
@@ -114,17 +127,90 @@ iframe {
 .post h2 a {
     text-decoration: none;
 }
+.post p {
+    padding: 10px;
+}
 .post .date {
     display: inline-block;
     font-size: 1.1em;
     float: right;
     color: #444;
     background-color: whiteSmoke;
-    padding: 15px 10px;
+    padding: 13px 10px 12px 10px;
     float: right;
 }
-
+.post .inline-date {
+    display: none;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #444;
+    font-size: .8em;
+}
 .post img {
+    max-width: 100%;
+    width: auto; /* for ie 8 */
+    height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* RWD */
+@media all and (max-width: 800px) {
+    #page {
+        padding: 0px 20px;
+    }
+    #nav {
+        width: 95%;
+        float: none;
+    }
+    .post .date {
+        display: none;
+        font-size: .8em;
+    }
+    .post .inline-date {
+        display: inline-block;
+    }
+}
+@media all and (max-width: 700px) {
+    #nav {
+        width: 93.8%;
+    }
+}
+@media all and (max-width: 600px) {
+    #nav {
+        width: 92.7%;
+    }
+    #header h1 {
+        font-size: 2em;
+    }
+}
+@media all and (max-width: 500px) {
+    #nav {
+        width: 90%;
+    }
+    #nav li {
+        margin-top: 9px;
+        padding: 7px;
+    }
+    #nav h1.nav-title{
+        font-size: 1.5em;
+    }
+    .post h2 {
+        word-wrap: break-word;
+        font-size: 1.1em;
+        padding: 6px 4px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    #header h1 {
+        font-size: 1.5em;
+    }
+    #nav h1.nav-title{
+        font-size: 1em;
+    } 
+    #nav li {
+        margin-top: 5px;
+        padding: 2px;
+    }
 }
