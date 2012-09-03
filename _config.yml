@@ -1,4 +1,4 @@
-tination: ./_site
+destination: ./_site
 auto:        true
 lsi:         false
 server_port: 4000
