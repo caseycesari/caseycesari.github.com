@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Utilizing S3 for a Heroku Django app
+title: Utilizing S3 for a Heroku Django App
 categories: [blog]
 ---
 
@@ -8,15 +8,15 @@ With the help of [a][1] [few][2] [articles][3], I was able to use Amazon’s [S3
 
 Before you start, make sure your virtual environment is activated.
 
-    source venv/bin/activate
+    $ source venv/bin/activate
 
 1\. The central library we'll be using is [django-storages][6], a library for using various storage engines with Django. Documentation [here][7].
 
-    pip install django-storages
+    $ pip install django-storages
 
 2\. You'll also need [boto][8], a dependency for django-storages. Boto is a Python library for interfacing with Amazon Web Services.
 
-    pip install boto
+    $ pip install boto
 
 3\. In your settings.py, add `'storages'` to your list of `INSTALLED_APPS`.
 
@@ -44,7 +44,7 @@ If you are using the built-in Django admin app, also update `ADMIN_MEDIA_PREFIX`
 
 8\. Check your app locally. Your static files should now be served from S3. Once you verify that is everything is working, update your app requirements:
 
-    pip freeze > requirements.txt
+    $ pip freeze > requirements.txt
 
 9\. If you don't have one already, create a `.slugignore` file in the root of your repo. This file is simliar to a `.gitignore` file, except files and folders are still tracked in the repo but are not compiled as part of your app on Heroku. Add the following line to the `.slugignore` file to ignore the static directory:
 
