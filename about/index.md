@@ -7,4 +7,4 @@ I'm Casey Thomas, a web developer and GIS analyst based out of Philadelphia. I w
 
 !["My fancy shoes."](/../img/about.png)
 
-More information, including my recent work and resume is available at [caseypthomas.org](http://www.caseypthomas.org)
+More information, including my recent work and resume, is available at [caseypthomas.org](http://www.caseypthomas.org)
