@@ -162,6 +162,10 @@ iframe {
     display: block;
     margin: 0 auto;
 }
+.view-more {
+    border-top: solid 1px #333;
+    text-align: center;
+}
 
 /* RWD */
 @media all and (max-width: 800px) {
