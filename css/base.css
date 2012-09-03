@@ -84,13 +84,15 @@ html, body {
 #content {
     margin-top: 0px;
 }
-footer {
+#footer {
     border-top: 1px solid #333;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
-footer .copyright {
+#footer .copyright {
     float: left;
 }
-footer .twitter {
+#footer .twitter {
     float: right;
 }
 a {
