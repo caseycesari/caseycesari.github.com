@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    // Transform your fixed header
+
     var toTop, prevToTop = 0,
         $nav = $('#nav'),
         // set equal to  css property 'top' of nav element
@@ -12,6 +14,8 @@ $(document).ready(function(){
         $nav.addClass("scroll")
     }
 
+    // Listen for scroll events, essentially to update
+    // the header's top css attribute
     $(window).scroll(function(){
         var toTop = $(window).scrollTop();
         if ($("body").height() > $(window).height()) {
@@ -36,5 +40,15 @@ $(document).ready(function(){
         }
 
         prevToTop = toTop;
+    });
+
+    // A little JS to help the header be more responsive
+    // Fixed elements inherit their size from the window,
+    // rather than the parent element; which is a problem.
+    // Tie the width of the header to the width of #page.
+    $page = $('#page')
+
+    $(window).resize(function(){
+        $nav.width($page.width());
     });
 }); 
