@@ -55,13 +55,13 @@ html, body {
     display: inline-block;
     height: 30px;
     padding: 12px;
-    margin-top: 6px;
+    margin-top: 10px;
     text-align: center;
 }
 #nav li:hover {
     cursor: pointer;
 }
-#nav a {
+#nav ul li a {
     color: #fff;
     font-size:.8em;
     text-decoration: none;
@@ -119,9 +119,9 @@ iframe {
     border-right: 0px;
 }
 .post h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 10px;
-    margin: 0px;
+    margin: 1px;
     display: inline-block;
 }
 .post h2 a {
@@ -132,11 +132,12 @@ iframe {
 }
 .post .date {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 21px;
+    line-height: 1.4em;
     float: right;
     color: #444;
     background-color: whiteSmoke;
-    padding: 13px 10px 12px 10px;
+    padding: 15px 10px;
     float: right;
 }
 .post .inline-date {
@@ -159,10 +160,6 @@ iframe {
     #page {
         padding: 0px 20px;
     }
-    #nav {
-        width: 95%;
-        float: none;
-    }
     .post .date {
         display: none;
         font-size: .8em;
@@ -172,28 +169,26 @@ iframe {
     }
 }
 @media all and (max-width: 700px) {
-    #nav {
-        width: 93.8%;
-    }
+
 }
 @media all and (max-width: 600px) {
-    #nav {
-        width: 92.7%;
-    }
     #header h1 {
         font-size: 2em;
     }
+    #nav li {
+        margin-top: 10px;
+    }
 }
 @media all and (max-width: 500px) {
-    #nav {
-        width: 90%;
+    #nav ul {
+        margin-right: 10px;
     }
     #nav li {
-        margin-top: 9px;
+        margin-top: 5px;
         padding: 7px;
     }
     #nav h1.nav-title{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .post h2 {
         word-wrap: break-word;
@@ -207,10 +202,20 @@ iframe {
         font-size: 1.5em;
     }
     #nav h1.nav-title{
-        font-size: 1em;
+        font-size: 1.2em;
     } 
+    #nav ul {
+        margin-right: 10px;
+    }
     #nav li {
-        margin-top: 5px;
-        padding: 2px;
+        margin-top: 9px;
+        padding: 1px;
+    }
+    #nav ul li a {
+        font-size:.7em;
+        display: inline-block;
+        height: 25px;
+        min-width: 60px;
+        padding: 5px 5px 0px 5px; 
     }
 }

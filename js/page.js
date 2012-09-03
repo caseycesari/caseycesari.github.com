@@ -48,6 +48,9 @@ $(document).ready(function(){
     // Tie the width of the header to the width of #page.
     $page = $('#page')
 
+    //initial set
+    $nav.width($page.width());
+
     $(window).resize(function(){
         $nav.width($page.width());
     });
