@@ -105,7 +105,6 @@ p {
 pre {
     font-family: "Courier new", Courier, "Andale Mono", monospace;
     padding: 10px;
-    margin: 10px;
     background-color: #9fb5d3;  
     overflow: auto;
     color: #333;
@@ -133,9 +132,6 @@ iframe {
 }
 .post h2 a {
     text-decoration: none;
-}
-.post p {
-    padding: 10px;
 }
 .post .date {
     display: inline-block;
