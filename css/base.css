@@ -145,8 +145,7 @@ iframe {
 }
 .post .inline-date {
     display: none;
-    margin: 10px 0px;
-    padding: 10px;
+    padding: 4px;
     color: #444;
     font-size: .8em;
     font-style: italic;
@@ -203,6 +202,9 @@ iframe {
         font-size: 1.1em;
         padding: 6px 4px;
     }
+    .post p {
+        padding: 10px;
+    }
 }
 
 @media all and (max-width: 400px) {
@@ -225,5 +227,8 @@ iframe {
         height: 25px;
         min-width: 60px;
         padding: 5px 5px 0px 5px; 
+    }
+    .post p {
+        padding: 10px;
     }
 }
