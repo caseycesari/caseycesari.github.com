@@ -147,6 +147,7 @@ iframe {
     padding: 10px;
     color: #444;
     font-size: .8em;
+    font-style: italic;
 }
 .post img {
     max-width: 100%;
