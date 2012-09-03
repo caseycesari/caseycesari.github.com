@@ -170,7 +170,10 @@ iframe {
 /* RWD */
 @media all and (max-width: 800px) {
     #page {
-        padding: 0px 20px;
+        padding: 0px 10px;
+    }
+    body {
+        font-size: 100%;
     }
     .post .date {
         display: none;
@@ -179,16 +182,13 @@ iframe {
     .post .inline-date {
         display: inline-block;
     }
-}
-@media all and (max-width: 700px) {
-
+    #nav li {
+        margin-top: 5px;
+    }
 }
 @media all and (max-width: 600px) {
     #header h1 {
         font-size: 2em;
-    }
-    #nav li {
-        margin-top: 10px;
     }
 }
 @media all and (max-width: 500px) {
@@ -196,7 +196,7 @@ iframe {
         margin-right: 10px;
     }
     #nav li {
-        margin-top: 5px;
+        margin-top: 4px;
         padding: 7px;
     }
     #nav h1.nav-title{
@@ -229,9 +229,9 @@ iframe {
     #nav ul li a {
         font-size:.7em;
         display: inline-block;
-        height: 25px;
+        height: 20px;
         min-width: 60px;
-        padding: 5px 5px 0px 5px; 
+        padding: 4px 5px 2px 5px; 
     }
     .post div {
         padding: 2px;
