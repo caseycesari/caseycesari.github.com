@@ -102,10 +102,16 @@ a:hover {
 p {
     line-height: 1.6em;
 }
-.iframe-container {
-    max-width: auto;
-    height: auto;
-    overflow:auto;
+pre {
+    font-family: "Courier new", Courier, "Andale Mono", monospace;
+    padding: 10px;
+    margin: 10px;
+    background-color: #9fb5d3;  
+    overflow: auto;
+    color: #333;
+}
+code {
+    font-family: "Courier new", Courier, "Andale Mono", monospace;
 }
 iframe {
     border: none;
