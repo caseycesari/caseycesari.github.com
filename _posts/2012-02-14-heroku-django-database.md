@@ -33,7 +33,7 @@ This will overwrite your database on Heroku. Adding the confirm parameter will s
 
 First, create a local database to store the backup tables in:
   
-    $ createdb backup
+    $ createdb backup_database_name
 
 Then, run:
 
