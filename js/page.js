@@ -11,7 +11,7 @@ $(document).ready(function(){
     if ($(window).scrollTop() > navToTop) {
         $nav.css('top', 0);
         $title.show();
-        $nav.addClass("scroll")
+        $nav.addClass("scroll");
     }
 
     // Listen for scroll events, essentially to update
@@ -27,14 +27,14 @@ $(document).ready(function(){
                 } else if (toTop > navToTop) {
                     $nav.css('top', 0);
                     $title.show();
-                    $nav.addClass("scroll")
+                    $nav.addClass("scroll");
                 }
             // scrolling up
             } else if (prevToTop > toTop) {
                 if (toTop < navToTop && toTop >= 0)  {
                     $nav.css('top', navToTop - toTop);
                     $title.hide();
-                    $nav.removeClass("scroll")
+                    $nav.removeClass("scroll");
                 }
             }
         }
@@ -46,7 +46,7 @@ $(document).ready(function(){
     // Fixed elements inherit their size from the window,
     // rather than the parent element; which is a problem.
     // Tie the width of the header to the width of #page.
-    $page = $('#page')
+    $page = $('#page');
 
     //initial set
     $nav.width($page.width());
@@ -54,4 +54,4 @@ $(document).ready(function(){
     $(window).resize(function(){
         $nav.width($page.width());
     });
-}); 
+});
