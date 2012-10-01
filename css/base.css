@@ -11,7 +11,7 @@ html, body {
 }
 #header {
     overflow: hidden;
-    background: 200px 0px #fff url() no-repeat;
+    background: 200px 0 #fff url() no-repeat;
     background-size: 70%;
     margin: 0;
     padding: 0;
@@ -21,13 +21,13 @@ html, body {
 #header h1 {
     font-size: 3em;
     color: #333;
-    margin: 50px 20px 0px 10px;
+    margin: 50px 20px 0 10px;
 }
 #header h1 a {
     text-decoration: none;
 }
 #header h3 {
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 #nav {
     position: fixed;
@@ -44,8 +44,8 @@ html, body {
 #nav ul {
     float: right;
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
@@ -117,6 +117,9 @@ code {
 iframe {
     border: none;
 }
+blockquote {
+    font-style: italic;
+}
 .post {
     margin-bottom: 30px;
 }
@@ -126,8 +129,8 @@ iframe {
 .post header {
     background: #ffe581;
     border: 1px solid #333;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
 }
 .post h2 {
     font-size: 1.4em;
@@ -146,7 +149,6 @@ iframe {
     color: #444;
     background-color: whiteSmoke;
     padding: 15px 10px;
-    float: right;
 }
 .post .inline-date {
     display: none;
@@ -170,7 +172,7 @@ iframe {
 /* RWD */
 @media all and (max-width: 800px) {
     #page {
-        padding: 0px 10px;
+        padding: 0 10px;
     }
     body {
         font-size: 100%;
