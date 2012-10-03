@@ -3,7 +3,7 @@ layout: post
 title: About
 date: 9/3/2012
 ---
-I'm Casey Thomas, a web developer and GIS analyst based out of Philadelphia. I write about code, maps and data. At the moment, I help journalists tell stories on the internet for the <a href="http://www.ppiin.org">Philadelphia Public Interest Information Network</a>.
+I'm Casey Thomas, a freelance web developer and GIS analyst based out of Philadelphia. I write about code, maps, data, journalism, and technology. At the moment, I help journalists tell stories on the internet for the <a href="http://www.ppiin.org">Philadelphia Public Interest Information Network</a>.
 
 !["My fancy shoes."](/../img/about.png)
 
