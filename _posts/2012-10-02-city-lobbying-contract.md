@@ -44,7 +44,7 @@ Also, expect headshots of your favorite lobbyists:
 
 > Provide an on-line directory of Lobbyists with standardized photos;
 
-It's clear the public will have some level of access to the data behind the site. But it is not clear whether or not access will be supplemented by, or in the form of, an API. An API is important because it allows for direct, sometimes real-time, integration of data into other applications. 
+It's clear the public will have some level of access to the data behind the site. But it is not clear whether or not access will be supplemented by, or in the form of, an API. An API is important because it allows for direct, often real-time, integration of data into other applications. 
 
 Mark Headd, a civic hacker, [open data advocate](http://civic.io/2012/09/12/3-reasons-to-care-about-open-data/) and the City's [first Chief Data Officer](http://technicallyphilly.com/2012/08/13/mark-headd-first-ever-city-of-philadelphia-chief-digital-officer), wasn't involved in putting the RFP together, but thinks an API "would be sweet.” 
 
