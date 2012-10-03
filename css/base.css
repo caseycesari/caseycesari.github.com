@@ -1,6 +1,6 @@
 html, body {
     color: #555;
-    font: normal 110% 'Open Sans', Helvetica, sans-serif; 
+    font: normal 100% 'Open Sans', Helvetica, sans-serif; 
     margin:0; 
     padding:0;
     width: 100%;
@@ -143,12 +143,12 @@ blockquote {
 }
 .post .date {
     display: inline-block;
-    font-size: 21px;
-    line-height: 1.4em;
+    font-size: 20px;
+    line-height: 1.2em;
     float: right;
     color: #444;
     background-color: whiteSmoke;
-    padding: 15px 10px;
+    padding: 14px 10px;
 }
 .post .inline-date {
     display: none;
