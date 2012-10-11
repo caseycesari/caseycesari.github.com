@@ -101,8 +101,8 @@
             .addLayer(new wax.leaf.connector(tilejson))
 
             L.control.layers([], { 
-              '2000': layers['2000 (Black)'].layer,
-              '2016': layers['2016 (Red)'].layer
+              '2000 (Black)': layers['2000'].layer,
+              '2016 (Red)': layers['2016'].layer
             }, {collapsed: false}).addTo(map);
           });
 
