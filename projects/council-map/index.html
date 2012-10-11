@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>City Council Districts 2000 vs 2016</title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" />
+        <![endif]-->
+        <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+        <script src='js/wax.leaf.min.js' type='text/javascript'></script>
+        <script src='data/2000.js' type='text/javascript'></script>
+        <script src='data/2016.js' type='text/javascript'></script>
+        <script src='data/intersect.js' type='text/javascript'></script>
+        <style>
+          body { 
+            margin:0; 
+            padding:0; 
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+          }
+          #map { position:absolute; top:0; bottom:0; width:100%; }
+          #district { 
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 7px;
+            box-shadow: 0 1px 7px #999;
+            position: absolute; 
+            top: 10px; 
+            right: 100px; 
+            width: 180px; 
+            height: 85px; 
+            z-index: 999;
+          }
+          .instructions {
+            margin-bottom: 5px;
+            font-size: 11px;
+            font-style: italic;
+            font-color: #666;
+          }
+        </style>
+        </head>
+        <body>
+        <div id="district">
+          <strong>Which Council District?</strong>
+          <div class="instructions">Hover over the map to see which district that location falls within.</div>
+          <div>Current (2000): <span id="dist_2000">1<span></div>
+          <div>Future (2016): <span id="dist_2016">1<span></div>
+        </div>
+        <div id="map"></div>
+        <script type="text/javascript">
+          
+          wax.tilejson('http://a.tiles.mapbox.com/v3/caseypt.map-kbiq8yif.jsonp',
+            function(tilejson) {
+
+            window.layers = {
+              '2000': {
+                style: {
+                  "color": "#444",
+                  "weight": 1,
+                  "opacity": 0.75
+                },
+              },
+              '2016': {
+                style: {
+                  "color": "red",
+                  "weight": 1,
+                  "opacity": 0.40
+                },
+              },
+              'intersect': {
+                style: {
+                  "color": "transparent",
+                  "fillColor": "transparent"
+                }
+              }
+            };
+
+            layers[2000].layer = new L.geoJson(d2000, { style: layers['2000'].style });
+            layers[2016].layer = new L.geoJson(d2016, { style: layers['2016'].style });
+
+            layers.intersect.layer = new L.geoJson(intersect, { 
+              style: layers.intersect.style,
+              onEachFeature: function(feature, layer) {
+                layer.on({
+                  mouseover: function(e) {
+                    document.getElementById('dist_2000').innerHTML = feature.properties.dist_2000;
+                    document.getElementById('dist_2016').innerHTML = feature.properties.dist_2016;
+                  }
+                })
+              }
+            });
+
+            window.map = new L.Map('map', {
+              minZoom: 11,
+              center: new L.LatLng(39.993, -75.133),
+              zoom: 11,
+              layers: [layers[2000].layer, layers[2016].layer, layers.intersect.layer]
+            })
+            .addLayer(new wax.leaf.connector(tilejson))
+
+            L.control.layers([], { 
+              '2000': layers['2000'].layer,
+              '2016': layers['2016'].layer
+            }, {collapsed: false}).addTo(map);
+          });
+
+        </script>
+    </body>
+</html>
