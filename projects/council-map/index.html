@@ -77,8 +77,29 @@
               }
             };
 
-            layers[2000].layer = new L.geoJson(d2000, { style: layers['2000'].style });
-            layers[2016].layer = new L.geoJson(d2016, { style: layers['2016'].style });
+            layers[2000].layer = new L.geoJson(d2000, { 
+              style: layers['2000'].style,
+              onEachFeature: function (feature, layer) {
+                layer.on({
+                  mouseover: function(){
+                    //keep intersect on top
+                    iGroup.bringToFront();
+                  }
+                })
+              }
+            });
+            
+            layers[2016].layer = new L.geoJson(d2016, { 
+              style: layers['2016'].style,
+              onEachFeature: function (feature, layer) {
+                layer.on({
+                  mouseover: function(){
+                    //keep intersect on top
+                    iGroup.bringToFront();
+                  }
+                })
+              }
+            });
 
             layers.intersect.layer = new L.geoJson(intersect, { 
               style: layers.intersect.style,
@@ -92,13 +113,17 @@
               }
             });
 
+            var iGroup = new L.FeatureGroup([layers.intersect.layer]);
+
             window.map = new L.Map('map', {
               minZoom: 11,
               center: new L.LatLng(39.993, -75.133),
               zoom: 11,
-              layers: [layers[2000].layer, layers[2016].layer, layers.intersect.layer]
+              layers: [layers[2000].layer, layers[2016].layer]
             })
-            .addLayer(new wax.leaf.connector(tilejson))
+            .addLayer(new wax.leaf.connector(tilejson));
+
+            iGroup.addTo(map);
 
             L.control.layers([], { 
               '2000 (Black)': layers['2000'].layer,
