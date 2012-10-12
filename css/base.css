@@ -110,6 +110,7 @@ pre {
     background-color: #9fb5d3;  
     overflow: auto;
     color: #333;
+    word-wrap: break-word;
 }
 code {
     font-family: "Courier new", Courier, "Andale Mono", monospace;
