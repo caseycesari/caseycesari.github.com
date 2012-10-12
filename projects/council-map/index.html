@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>City Council Districts 2000 vs 2016</title>
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
         <!--[if lte IE 8]>
@@ -33,15 +34,25 @@
             position: absolute; 
             top: 12px; 
             right: 140px; 
-            width: 210px; 
-            height: 120px; 
             z-index: 999;
+            width: 230px;
           }
           .instructions {
             margin-bottom: 5px;
             font-size: 13px;
             font-style: italic;
             font-color: #666;
+          }
+          @media all and (max-width: 665px) {
+            body {
+              font-size: 12px;
+            }
+            #district {
+              bottom: 20px;
+              right: 10px;
+              top: auto;
+              width: 100px;
+            }
           }
         </style>
         </head>
@@ -134,7 +145,7 @@
                 iGroup.addTo(map);
 
                 L.control.layers([], { 
-                  '2000 (Black)': layers['2000'].layer,
+                  '2000 (Gray)': layers['2000'].layer,
                   '2016 (Red)': layers['2016'].layer
                 }, {collapsed: false}).addTo(map);
               }
