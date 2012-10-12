@@ -9,17 +9,21 @@
         <![endif]-->
         <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
         <script src='js/wax.leaf.min.js' type='text/javascript'></script>
-        <script src='data/2000.js' type='text/javascript'></script>
-        <script src='data/2016.js' type='text/javascript'></script>
-        <script src='data/intersect.js' type='text/javascript'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
         <style>
           body { 
             margin:0; 
             padding:0; 
             font-family: Helvetica, Arial, sans-serif;
             font-size: 18px;
+            color: #333;
           }
-          #map { position:absolute; top:0; bottom:0; width:100%; }
+          #map { 
+            position:absolute; 
+            top:0; 
+            bottom:0; 
+            width:100%; 
+          }
           #district { 
             padding: 5px;
             background-color: #fff;
@@ -30,12 +34,12 @@
             top: 12px; 
             right: 140px; 
             width: 210px; 
-            height: 100px; 
+            height: 120px; 
             z-index: 999;
           }
           .instructions {
             margin-bottom: 5px;
-            font-size: 11px;
+            font-size: 13px;
             font-style: italic;
             font-color: #666;
           }
@@ -50,91 +54,92 @@
         </div>
         <div id="map"></div>
         <script type="text/javascript">
-          
-          wax.tilejson('http://a.tiles.mapbox.com/v3/caseypt.map-kbiq8yif.jsonp',
-            function(tilejson) {
-
-            window.layers = {
-              '2000': {
-                style: {
-                  "color": "#444",
-                  "weight": 1,
-                  "opacity": 0.75
-                },
-              },
-              '2016': {
-                style: {
-                  "color": "red",
-                  "weight": 1,
-                  "opacity": 0.40
-                },
-              },
-              'intersect': {
-                style: {
-                  "color": "transparent",
-                  "fillColor": "transparent"
-                }
-              }
-            };
-
-            layers[2000].layer = new L.geoJson(d2000, { 
-              style: layers['2000'].style,
-              onEachFeature: function (feature, layer) {
-                layer.on({
-                  mouseover: function(){
-                    //keep intersect on top
-                    iGroup.bringToFront();
-                  }
-                })
-              }
-            });
-            
-            layers[2016].layer = new L.geoJson(d2016, { 
-              style: layers['2016'].style,
-              onEachFeature: function (feature, layer) {
-                layer.on({
-                  mouseover: function(){
-                    //keep intersect on top
-                    iGroup.bringToFront();
-                  }
-                })
-              }
-            });
-
-            layers.intersect.layer = new L.geoJson(intersect, { 
-              style: layers.intersect.style,
-              onEachFeature: function(feature, layer) {
-                layer.on({
-                  mouseover: function(e) {
-                    document.getElementById('dist_2000').innerHTML = feature.properties.dist_2000;
-                    document.getElementById('dist_2016').innerHTML = feature.properties.dist_2016;
+          wax.tilejson('http://a.tiles.mapbox.com/v3/caseypt.map-kbiq8yif.jsonp', function(tilejson) {
+            $.ajax({
+              url: 'data/data.json',
+              success: function(resp) {
+                window.layers = {
+                  '2000': {
+                    style: {
+                      "color": "#444",
+                      "weight": 1,
+                      "opacity": 0.75
+                    },
                   },
-                  click: function(e) {
-                    document.getElementById('dist_2000').innerHTML = feature.properties.dist_2000;
-                    document.getElementById('dist_2016').innerHTML = feature.properties.dist_2016;
+                  '2016': {
+                    style: {
+                      "color": "red",
+                      "weight": 1,
+                      "opacity": 0.40
+                    },
+                  },
+                  'intersect': {
+                    style: {
+                      "color": "transparent",
+                      "fillColor": "transparent"
+                    }
                   }
+                };
+
+                layers[2000].layer = new L.geoJson(resp['2000'], { 
+                  style: layers['2000'].style,
+                  onEachFeature: function (feature, layer) {
+                    layer.on({
+                      mouseover: function(){
+                        //keep intersect on top
+                        iGroup.bringToFront();
+                      }
+                    })
+                  }
+                });
+                
+                layers[2016].layer = new L.geoJson(resp['2016'], { 
+                  style: layers['2016'].style,
+                  onEachFeature: function (feature, layer) {
+                    layer.on({
+                      mouseover: function(){
+                        //keep intersect on top
+                        iGroup.bringToFront();
+                      }
+                    })
+                  }
+                });
+
+                layers.intersect.layer = new L.geoJson(resp.intersect, { 
+                  style: layers.intersect.style,
+                  onEachFeature: function(feature, layer) {
+                    layer.on({
+                      mouseover: function(e) {
+                        document.getElementById('dist_2000').innerHTML = feature.properties.dist_2000;
+                        document.getElementById('dist_2016').innerHTML = feature.properties.dist_2016;
+                      },
+                      click: function(e) {
+                        document.getElementById('dist_2000').innerHTML = feature.properties.dist_2000;
+                        document.getElementById('dist_2016').innerHTML = feature.properties.dist_2016;
+                      }
+                    })
+                  }
+                });
+
+                var iGroup = new L.FeatureGroup([layers.intersect.layer]);
+
+                window.map = new L.Map('map', {
+                  minZoom: 11,
+                  center: new L.LatLng(39.993, -75.133),
+                  zoom: 11,
+                  layers: [layers[2000].layer, layers[2016].layer]
                 })
+                .addLayer(new wax.leaf.connector(tilejson));
+
+                iGroup.addTo(map);
+
+                L.control.layers([], { 
+                  '2000 (Black)': layers['2000'].layer,
+                  '2016 (Red)': layers['2016'].layer
+                }, {collapsed: false}).addTo(map);
               }
             });
-
-            var iGroup = new L.FeatureGroup([layers.intersect.layer]);
-
-            window.map = new L.Map('map', {
-              minZoom: 11,
-              center: new L.LatLng(39.993, -75.133),
-              zoom: 11,
-              layers: [layers[2000].layer, layers[2016].layer]
-            })
-            .addLayer(new wax.leaf.connector(tilejson));
-
-            iGroup.addTo(map);
-
-            L.control.layers([], { 
-              '2000 (Black)': layers['2000'].layer,
-              '2016 (Red)': layers['2016'].layer
-            }, {collapsed: false}).addTo(map);
           });
-
         </script>
     </body>
 </html>
