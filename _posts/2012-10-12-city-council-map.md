@@ -35,6 +35,6 @@ This layer is then added on top of the other layers, but all the color attribute
       }
     });
 
-The same code is applied to the 2016 layer. Now if either of the visible layers is turned off and on (which puts it on top of all the other layers), when the user clicks or hovers over the map, the transparent layer is pushed to the front, and the district information is updated on the page. Both visible layers can also be turned off, and the user will still get district information for the area of the city they click on.
+The same code is applied to the 2016 layer. Now if either of the visible layers are turned off and on (which puts it on top of all the other layers), when the user clicks or hovers over the map, the transparent layer is pushed to the front, and the district information is updated on the page. Both visible layers can also be turned off, and the user will still get district information for the area of the city they click on.
 
 The downside to this method is that there an additional, more complex layer on the map. Even though you can't see the transparent layer, it still takes resources to load and draw. A faster solution would be to render map tiles using [TileMill](http://mapbox.com/tilemill/) using the same transparent, intersect layer technique. However, once I exported the transparent tiles, the interaction I set up was lost. Given this, I think the transparent vector layer approach is a good way to solve overlapping layer interactivity.
