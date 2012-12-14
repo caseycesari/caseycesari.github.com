@@ -2,15 +2,15 @@ $(document).ready(function(){
     // Transform your fixed header
 
     var toTop, prevToTop = 0,
-        $nav = $('#nav'),
+        $nav = $('.site-header .container'),
         // set equal to  css property 'top' of nav element
-        navToTop = 150,
-        $title = $('.nav-title');
+        navToTop = 0;
+        //$title = $('.nav-title');
 
     // initial check
     if ($(window).scrollTop() > navToTop) {
         $nav.css('top', 0);
-        $title.show();
+        //$title.show();
         $nav.addClass("scroll");
     }
 
@@ -26,14 +26,14 @@ $(document).ready(function(){
                     $nav.css('top', navToTop - toTop);
                 } else if (toTop > navToTop) {
                     $nav.css('top', 0);
-                    $title.show();
+                    //$title.show();
                     $nav.addClass("scroll");
                 }
             // scrolling up
             } else if (prevToTop > toTop) {
                 if (toTop < navToTop && toTop >= 0)  {
                     $nav.css('top', navToTop - toTop);
-                    $title.hide();
+                    //$title.hide();
                     $nav.removeClass("scroll");
                 }
             }

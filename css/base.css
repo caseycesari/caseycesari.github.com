@@ -9,40 +9,36 @@ html, body {
   max-width: 800px;
   margin: 0 auto;
 }
-#header {
-  overflow: hidden;
-  background: 200px 0 #fff url() no-repeat;
-  background-size: 70%;
-  margin: 0;
-  padding: 0;
-  height: 250px;
+.site-header {
+  z-index: 100;
+  height: 100px;
   width: 100%;
 }
-#header h1 {
-  font-size: 3em;
-  color: #333;
-  margin: 50px 20px 0 10px;
-  display: inline-block;
+.site-header .container {
+  background-color: #fff;
+  position: fixed;
+  width: 800px;
 }
-#header h1 a {
+.site-header .container.scroll {
+  background: #fff;
+  border-bottom: solid 1px #333;
+  box-shadow: 0 2px 7px -2px #888;
+}
+.site-header h1 {
+  font-size: 2em;
+  color: #333;
+}
+.site-header h1 a {
   text-decoration: none;
+  float: left;
 }
 #header h3 {
   margin: 0 10px;
 }
-#nav {
-  position: fixed;
-  z-index: 999;
-  top: 150px;
-  width: 800px;
+.site-header nav {
   text-transform: uppercase;
 }
-#nav.scroll {
-  background: #fff;
-  border-bottom: solid 1px #333;
-  box-shadow: 0px 2px 7px -2px #888;
-}
-#nav ul {
+.site-header nav ul {
   float: right;
   list-style-type: none;
   margin: 0;
@@ -53,47 +49,31 @@ html, body {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
 }
-#nav li {
+.site-header nav li {
   display: inline-block;
-  height: 30px;
-  padding: 12px;
-  margin-top: 10px;
   text-align: center;
+  padding: 0 0 0 20px;
 }
-#nav li:hover {
-  cursor: pointer;
-}
-#nav ul li a {
-  color: #fff;
+.site-header nav ul li a {
   font-size:.8em;
   text-decoration: none;
   display: inline-block;
-  height: 25px;
-  min-width: 90px;
-  padding: 5px 5px 0px 5px;
-  border-radius: 4px;
-  background: #41717f;
-  border: 1px solid #333;
 }
-#nav h1.nav-title {
-  font-size: 2.0em;
-  margin: 0;
-  padding: 10px;
-  float: left;
-  display: none;
+.site-header nav ul li a:hover {
+  text-decoration: underline;
 }
 #content {
-  margin-top: 0px;
+  margin-top: 0;
 }
-#footer {
+footer {
   border-top: 1px solid #333;
   margin-bottom: 20px;
   overflow: hidden;
 }
-#footer .copyright {
+footer .date {
   float: left;
 }
-#footer .twitter {
+footer .twitter {
   float: right;
 }
 a {
@@ -146,11 +126,10 @@ blockquote {
 .post .date {
   display: inline-block;
   font-size: 20px;
-  line-height: 1.2em;
   float: right;
   color: #444;
   background-color: whiteSmoke;
-  padding: 14px 10px;
+  padding: 12px 10px;
 }
 .post .inline-date {
   display: none;
@@ -186,7 +165,7 @@ blockquote {
   .post .inline-date {
     display: inline-block;
   }
-  #nav li {
+  nav li {
     margin-top: 5px;
   }
 }
@@ -196,14 +175,14 @@ blockquote {
   }
 }
 @media all and (max-width: 500px) {
-  #nav ul {
+  nav ul {
     margin-right: 10px;
   }
-  #nav li {
+  nav li {
     margin-top: 4px;
     padding: 7px;
   }
-  #nav h1.nav-title{
+  nav h1.nav-title{
     font-size: 1.3em;
   }
   .post {
@@ -220,17 +199,17 @@ blockquote {
   #header h1 {
     font-size: 1.5em;
   }
-  #nav h1.nav-title{
+  nav h1.nav-title {
     font-size: 1.2em;
   } 
-  #nav ul {
+  nav ul {
     margin-right: 10px;
   }
-  #nav li {
+  nav li {
     margin-top: 9px;
     padding: 1px;
   }
-  #nav ul li a {
+  nav ul li a {
     font-size:.7em;
     display: inline-block;
     height: 20px;
