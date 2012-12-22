@@ -124,6 +124,7 @@ blockquote {
   text-decoration: none;
 }
 .post .date {
+  line-height: 1.4em;
   display: inline-block;
   font-size: 20px;
   float: right;
