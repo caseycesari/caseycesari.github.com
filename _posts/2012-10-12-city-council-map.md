@@ -12,7 +12,7 @@ The tricky part was figuring out a way to get the district information from both
 
 The solution was to create a transparent layer that contained information for both district layers. The first step in creating this layer is to intersect the 2000 and 2016 layers. I used [QGIS](http://qgis.org/)'s vector intersect function to do this. Here is the output:
 
-![Council District Intersect](/img/council-district-intersect.png)
+![Council District Intersect](/assets/img/council-district-intersect.png)
 
 Basically, for each area where polygons from both layers overlap, a new polygon is created which contains the attributes from both layers. The ArcMap documentation has a [simple graphic](http://webhelp.esri.com/arcgisdesktop/9.2/published_images/intersect_esri.gif) showing how this function works.
 
