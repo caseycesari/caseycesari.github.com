@@ -3,14 +3,14 @@ layout: default
 title: Archive
 ---
 
-<div class="posts">
+<div class="archive">
   <ul>
     {% for post in site.posts %}
       <li>
-        <h4 class="row">
+        <h5 class="row">
           <a href="{{ post.url }}" class="large-9 columns">{{ post.title }}</a>
           <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
-        </h4>
+        </h5>
       </li>
     {% endfor %}
   </ul>
