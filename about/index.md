@@ -11,4 +11,4 @@ If you would like to work with me, please get in <a href="mailto:&#105;&#110;&#1
 
 My resume is available <a href="/resume/">here</a>.
 
-<i>This site is hosted on [Github Pages](http://pages.github.com/) and is powered by [Jekyll](https://github.com/mojombo/jekyll).</i>
+*This site is hosted on [Github Pages](http://pages.github.com/) and is powered by [Jekyll](https://github.com/mojombo/jekyll).*
