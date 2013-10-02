@@ -1,6 +1,5 @@
 destination: ./_site
-auto:        true
 lsi:         false
-server_port: 4000
+port: 4000
 permalink: /:year/:month/:day/:title.html
 url:         http://www.cpt.ph
