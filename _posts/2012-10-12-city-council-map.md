@@ -18,10 +18,13 @@ Basically, for each area where polygons from both layers overlap, a new polygon 
 
 Once I had the resulting shapefile, I needed to convert it to GeoJSON format--which are [quite easy](http://leaflet.cloudmade.com/examples/geojson.html) to add to a Leaflet map. A quick and painless way to do this is with the [ogr2ogr](http://www.gdal.org/ogr2ogr.html) command line tool that is part of ever-helpful [Geospatial Data Abstraction Library](http://www.gdal.org/). Here we convert the shapefile to the [WGS 84 map projection](http://spatialreference.org/ref/epsg/4326/) from state plane, and only include the fields we need for the map:
 
+    {% highlight bash %}
     $ ogr2ogr -f GeoJSON -t_srs EPSG:4326 -select dist_2000, dist_2016 intersect.json intersect.shp
+    {% endhighlight %}
 
 This layer is then added on top of the other layers, but all the color attributes are set to `transparent`. When a user clicks or hovers over the map, they are actually hovering over the intersect layer. In leaflet (and in SVG graphics in general), elements that are drawn last are put on top of existing elements. To make sure the transparent layer is always on top of the other layers, we push it to the front if a user clicks or hovers over one of the other visible layers. The transparent layer is added to a [FeatureGroup](http://leaflet.cloudmade.com/reference.html#featuregroup), which has a handy `bringToFront()` method. Here is a simplified version of the code:
 
+    {% highlight javascript %}
     2000_districts = new L.geoJson(2000_districts_geojson, { 
       onEachFeature: function (feature, layer) {
         layer.on({
@@ -34,6 +37,7 @@ This layer is then added on top of the other layers, but all the color attribute
         })
       }
     });
+    {% endhighlight %}
 
 The same code is applied to the 2016 layer. Now if either of the visible layers are turned off and on (which puts it on top of all the other layers), when the user clicks or hovers over the map, the transparent layer is pushed to the front, and the district information is updated on the page. Both visible layers can also be turned off, and the user will still get district information for the area of the city they click on.
 

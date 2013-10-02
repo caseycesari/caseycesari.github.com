@@ -15,11 +15,15 @@ To use Taps, you’ll need ruby on your local machine. You’ll also need to ins
 
 Mysql
 
+	{% highlight bash %}
     $ gem install mysql
+    {% endhighlight %}
 
 Postgres
 
+	{% highlight bash %}
     $ gem install pg
+    {% endhighlight %}
 
 Also, since there is no .yml for a Django project, you'll need to use the database URL parameters for all of the Taps commands or create a .yml file. For my project, I was using Postgres, so I'll use those for the examples. The mysql database URL structure is a little different. See the Heroku Taps [article][3] for an example.
 
@@ -27,17 +31,23 @@ Also, since there is no .yml for a Django project, you'll need to use the databa
 
 This will overwrite your database on Heroku. Adding the confirm parameter will skip the confirmation from Heroku. If you want to play it safe and make this a two-step process, leave it off.
 
+	{% highlight bash %}
     $ heroku db:push postgres://user:pass@localhost/database_name --confirm your-heroku-app-name-here
+    {% endhighlight %}
 
 ####Backing up Heroku database
 
 First, create a local database to store the backup tables in:
   
+  	{% highlight bash %}
     $ createdb backup_database_name
+    {% endhighlight %}
 
 Then, run:
 
+	{% highlight bash %}
     $ heroku db:pull postgres://user:pass@localhost/backup_database_name
+    {% endhighlight %}
 
 ####Modifying the schema of the Heroku database
 
@@ -45,13 +55,17 @@ I highly recommend using [South][5] for database migrations in Django. With Sout
 
 Once you have South up and running locally, you can update the Heroku database schemas just like you would on your local machine. Make sure the South migration files are being tracked in your git repo so that they get pushed to Heroku. Then run `syncdb` on Heroku to add the necessary South tables to your remote database. Now you can run migrations on Heroku just like you would locally. For example:
 
+	{% highlight bash %}
     $ heroku run python project_name/manage.py migrate app_name
+    {% endhighlight %}
 
 ####Use a remote database for your Heroku app
 
 When you are ready to move your database off Heroku (I think you can find a better deal on a cloud database than using the Heroku options), you'll need to modify your settings.py to point to a remote server. After getting your remote DB up and running, run this command
 
+	{% highlight bash %}
     $ heroku config:add DATABASE_URL= your_database_url
+    {% endhighlight %}
 
 If you don't have this line in your settings.py, Heroku adds this line automatically and points it at it's own servers. Adding this line yourself allows you to specify which database Heroku should look to for your app.
 
