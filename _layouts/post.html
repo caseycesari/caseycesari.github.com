@@ -4,10 +4,14 @@ layout: default
 <article>
   <div class="post">
     <header>
-      <h2>{{ page.title }}</h2>
+      {% if page.external_link %} 
+      	<h2><a href="{{ page.external_link }}">{{ page.title }}</a></h2>
+      {% else %}
+      	<h2>{{ page.title }}</h2>
+      {% endif %}
       <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
     </header>
-    <span class="inline-date">{{ page.date | date: "%B %d, %Y" }}</span>
+    {% if page.image %} <img src="{{ page.image }}"/> {% endif %}
     <div>{{ content }}</div>
   </div>
   {% include view-more.html %}

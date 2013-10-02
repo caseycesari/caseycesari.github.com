@@ -3,7 +3,6 @@ layout: post
 title: Utilizing S3 for a Heroku Django App
 categories: [blog]
 ---
-
 With the help of [a][1] [few][2] [articles][3], I was able to use Amazon’s [S3][4] service to host static files for a Django app hosted on [Heroku][5]. Below are the steps I followed to get this working.
 
 Before you start, make sure your virtual environment is activated.

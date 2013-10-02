@@ -3,13 +3,15 @@ layout: default
 title: Archive
 ---
 
-{% for post in site.categories.blog %}
-<article>
-  <div class="post">
-    <header>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <span class="date">{{ post.date | date: "%m/%d/%Y" }}</span>
-    </header>
-  </div>
-</article>
-{% endfor %}
+<div class="posts">
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h4 class="row">
+          <a href="{{ post.url }}" class="large-9 columns">{{ post.title }}</a>
+          <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
+        </h4>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
