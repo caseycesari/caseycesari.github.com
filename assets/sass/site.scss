@@ -19,10 +19,16 @@ ul {
 .posts {
   .date {
     color: #ccc;
+    text-align: right;
   }
 
   ul {
     li {
+      margin-bottom: 3em;
+
+      h4.row {
+        margin-bottom: 0.5em;
+      }
 
       img {
         border: 1px solid #ccc;

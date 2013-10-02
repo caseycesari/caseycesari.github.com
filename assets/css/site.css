@@ -11,9 +11,14 @@ ul {
   padding-top: 0.9em; }
 
 .posts .date {
-  color: #ccc; }
-.posts ul li img {
-  border: 1px solid #ccc; }
+  color: #ccc;
+  text-align: right; }
+.posts ul li {
+  margin-bottom: 3em; }
+  .posts ul li h4.row {
+    margin-bottom: 0.5em; }
+  .posts ul li img {
+    border: 1px solid #ccc; }
 
 .post img {
   border: 1px solid #ccc; }
