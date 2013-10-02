@@ -21,4 +21,15 @@ ul {
     border: 1px solid #ccc; }
 
 .post img {
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  margin-bottom: 2em; }
+.post .date {
+  color: #ccc;
+  display: block;
+  margin-bottom: 2em; }
+
+.archive .date {
+  color: #ccc;
+  text-align: right; }
+.archive ul li {
+  margin-bottom: 1em; }

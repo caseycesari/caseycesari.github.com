@@ -40,5 +40,25 @@ ul {
 .post {
   img {
     border: 1px solid #ccc;
+    margin-bottom: 2em;
+  }
+
+  .date {
+    color: #ccc;
+    display: block;
+    margin-bottom: 2em;
+  }
+}
+
+.archive {
+  .date {
+    color: #ccc;
+    text-align: right;
+  }
+
+  ul {
+    li {
+      margin-bottom: 1em;
+    }
   }
 }
