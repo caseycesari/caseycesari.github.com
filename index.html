@@ -21,6 +21,7 @@ layout: default
           {% endif %}
         {% endif %}
         <p>{{ post.excerpt }}</p>
+        {% if post.external_link == null %} <a href="{{ post.url }}">Continue reading <i class="icon-long-arrow-right"></i></a> {% endif %}
       </li>
     {% endfor %}
   </ul>
