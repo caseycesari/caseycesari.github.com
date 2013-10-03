@@ -11,7 +11,7 @@ layout: default
       {% endif %}
       <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
     </header>
-    {% if page.image %} <img src="{{ page.image }}"/> {% endif %}
+    {% if page.image %} <img class="featured" src="{{ page.image }}"/> {% endif %}
     <div>{{ content }}</div>
   </div>
 </article>

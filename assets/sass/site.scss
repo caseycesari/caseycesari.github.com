@@ -2,6 +2,23 @@ body {
   color: #333;
 }
 
+p {
+  font-family: source-sans-pro, sans-serif;
+}
+
+a, a:link, a:visited, a:active {
+  font-family: source-sans-pro, sans-serif;
+  color: #FFA500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: didact-gothic, sans-serif;
+}
+
 ul {
   list-style-type: none;
 }
@@ -12,14 +29,27 @@ ul {
 
 #sidebar {
   header {
-    padding-top: 0.9em;
+    padding-top: 0.5em;
+
+    @media(max-width: 768px) {
+      padding-top: 0;
+    }
+
+    .name a {
+      font-size: 27px;
+    }
   }
 }
 
 .posts {
   .date {
-    color: #ccc;
+    color: #aaa;
     text-align: right;
+
+    @media(max-width: 768px) {
+      text-align: left;
+      font-size: 16px;
+    }
   }
 
   ul {
@@ -39,12 +69,17 @@ ul {
 
 .post {
   img {
-    border: 1px solid #ccc;
-    margin-bottom: 2em;
+    margin: 0 auto;
+    display: block;
+
+    &.featured {
+      border: 1px solid #ccc;
+      margin-bottom: 2em;
+    }
   }
 
   .date {
-    color: #ccc;
+    color: #aaa;
     display: block;
     margin-bottom: 2em;
   }
@@ -60,5 +95,16 @@ ul {
     li {
       margin-bottom: 1em;
     }
+  }
+}
+
+.pagination {
+  font-family: source-sans-pro, sans-serif;
+  padding: 1em 1em 2em 1em;
+  font-size: 1.5em;
+  text-align: center;
+
+  @media(max-width: 768px) {
+    font-size: 1.2em;
   }
 }
