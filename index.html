@@ -7,10 +7,13 @@ layout: default
     {% for post in paginator.posts %}
       <li>
         <h4 class="row">
-          <a href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}" class="large-9 columns">{{ post.title }}</a>
+          <span class="large-9 columns">
+            <a href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
+            {% if post.external_link %}<i class="icon-external-link"></i>{% endif %}
+          </span>
           <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
         </h4>
-        <a href="{{ post.external_link }}">{% if post.image %} <img src="{{ post.image }}"/> {% endif %}</a>
+        {% if post.image %}<a href="{{ post.external_link }}"><img src="{{ post.image }}"/></a>{% endif %}
         <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
@@ -21,17 +24,17 @@ layout: default
 <div class="pagination">
   {% if paginator.previous_page  %}
     {% if paginator.previous_page == 1 %}
-      <a href="/" class="previous">&larr;</a>
+      <a href="/" class="previous"><i class="icon-long-arrow-left"></i></a>
     {% else %}
-      <a href="/page{{ paginator.previous_page }}" class="previous">&larr;</a>
+      <a href="/page{{ paginator.previous_page }}" class="previous"><i class="icon-long-arrow-left"></i> </a>
     {% endif %}
   {% else %}
-    <span class="previous">&larr;</span>
+    <span class="previous"><i class="icon-long-arrow-left"></i></span>
   {% endif %}
   <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">&rarr;</a>
+    <a href="/page{{ paginator.next_page }}" class="next"><i class="icon-long-arrow-right"></i></a>
   {% else %}
-    <span class="next ">&rarr;</span>
+    <span class="next "><i class="icon-long-arrow-right"></i></span>
   {% endif %}
 </div>

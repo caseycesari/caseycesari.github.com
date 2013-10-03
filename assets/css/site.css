@@ -38,6 +38,9 @@ ul {
   margin-bottom: 3em; }
   .posts ul li h4.row {
     margin-bottom: 0.5em; }
+    .posts ul li h4.row .icon-external-link {
+      font-size: 0.6em;
+      color: #aaa; }
   .posts ul li img {
     border: 1px solid #ccc; }
 
@@ -59,6 +62,7 @@ ul {
   margin-bottom: 1em; }
 
 .pagination {
+  color: #444;
   font-family: source-sans-pro, sans-serif;
   padding: 1em 1em 2em 1em;
   font-size: 1.5em;
@@ -66,3 +70,5 @@ ul {
   @media (max-width: 768px) {
     .pagination {
       font-size: 1.2em; } }
+  .pagination .previous i, .pagination .next i {
+    margin: 0 0.5em; }

@@ -3,7 +3,7 @@ layout: post
 title: About
 date: 2013-10-02
 ---
-I'm a freelance news developer based out of Philadelphia. My work has been published on <a href="http://www.axisphilly.org">AxisPhilly.org</a>, <a href="http://www.philly.com">Philly.com</a>, <a href="http://www.PhillyDailyNews.com">PhillyDailyNews.com</a>, <a href="http://www.inquirer.com">Inquirer.com</a>, <a href="http://www.citypaper.net">CityPaper.net</a>, <a href="http://www.newsworks.org">NewsWorks.org</a> and <a href="http://www.planphilly.org">PlanPhilly.org</a> and in the Philadelphia Inquirer, the Philadelphia Daily News and the Philadelphia City Paper.
+I'm a freelance news developer based out of Philadelphia. My work has been published on <a href="http://www.axisphilly.org">AxisPhilly.org</a>, <a href="http://www.philly.com">Philly.com</a>, <a href="http://www.PhillyDailyNews.com">PhillyDailyNews.com</a>, <a href="http://www.inquirer.com">Inquirer.com</a>, <a href="http://www.citypaper.net">CityPaper.net</a>, <a href="http://www.newsworks.org">NewsWorks.org</a>, <a href="http://www.planphilly.org">PlanPhilly.org</a> and in The Philadelphia Inquirer, the Philadelphia Daily News and the Philadelphia City Paper.
 
 Previously, I was the news applications editor at AxisPhilly.
 

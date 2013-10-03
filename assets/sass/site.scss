@@ -58,6 +58,11 @@ ul {
 
       h4.row {
         margin-bottom: 0.5em;
+
+        .icon-external-link {
+          font-size: 0.6em;
+          color: #aaa;
+        }
       }
 
       img {
@@ -99,6 +104,7 @@ ul {
 }
 
 .pagination {
+  color: #444;
   font-family: source-sans-pro, sans-serif;
   padding: 1em 1em 2em 1em;
   font-size: 1.5em;
@@ -106,5 +112,9 @@ ul {
 
   @media(max-width: 768px) {
     font-size: 1.2em;
+  }
+
+  .previous i, .next i {
+    margin: 0 0.5em;
   }
 }
