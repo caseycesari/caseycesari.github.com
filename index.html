@@ -13,7 +13,13 @@ layout: default
           </span>
           <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
         </h4>
-        {% if post.image %}<a href="{{ post.external_link }}"><img src="{{ post.image }}"/></a>{% endif %}
+        {% if post.image %}
+          {% if post.external_link %}
+            <a href="{{ post.external_link }}"><img src="{{ post.image }}"/></a>
+          {% else %}
+            <img src="{{ post.image }}"/>
+          {% endif %}
+        {% endif %}
         <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
