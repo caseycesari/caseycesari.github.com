@@ -19,30 +19,54 @@ ul {
 #wrapper {
   margin-top: 40px; }
 
-#sidebar header {
-  padding-top: 0.5em; }
-  @media (max-width: 768px) {
-    #sidebar header {
-      padding-top: 0; } }
-  #sidebar header .name a {
-    font-size: 27px; }
+#sidebar {
+  position: fixed; }
+  @media (max-width: 767px) {
+    #sidebar {
+      position: relative; } }
+  #sidebar header {
+    font-family: didact-gothic, sans-serif;
+    padding-top: 0.2em; }
+    @media (max-width: 767px) {
+      #sidebar header {
+        padding-top: 0; } }
+    #sidebar header .name a {
+      font-size: 27px; }
 
-.posts .date {
-  color: #aaa;
-  text-align: right; }
-  @media (max-width: 768px) {
-    .posts .date {
-      text-align: left;
-      font-size: 16px; } }
+.posts header {
+  font-family: didact-gothic, sans-serif;
+  margin-bottom: 0.5em; }
+  .posts header .title {
+    font-family: didact-gothic, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    padding-left: 0.64em; }
+  .posts header .date {
+    color: #aaa;
+    float: right;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    text-align: right; }
+    @media (max-width: 767px) {
+      .posts header .date {
+        text-align: left;
+        font-size: 16px; } }
+  .posts header .external {
+    font-size: 0.7em;
+    color: #aaa;
+    vertical-align: 4%;
+    position: relative;
+    display: inline-block; }
 .posts ul li {
   margin-bottom: 3em; }
-  .posts ul li h4.row {
-    margin-bottom: 0.5em; }
-    .posts ul li h4.row .icon-external-link {
-      font-size: 0.6em;
-      color: #aaa; }
   .posts ul li img {
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    margin-top: 1.4em; }
+.posts .continue {
+  font-style: italic;
+  font-size: 0.95em; }
+  .posts .continue i {
+    font-style: italic; }
 
 .post img {
   margin: 0 auto;
@@ -67,8 +91,10 @@ ul {
   padding: 1em 1em 2em 1em;
   font-size: 1.5em;
   text-align: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .pagination {
       font-size: 1.2em; } }
   .pagination .previous i, .pagination .next i {
     margin: 0 0.5em; }
+  .pagination .previous:hover, .pagination .next:hover {
+    text-decoration: none; }

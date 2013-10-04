@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="posts">
-  <ul>
+  <ul class="row">
     {% for post in paginator.posts %}
-      <li>
-        <h4 class="row">
-          <span class="large-9 columns">
+      <li class="large-12 columns">
+        <header class="row">
+          <span class="large-9 columns title">
             <a href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
-            {% if post.external_link %}<i class="icon-external-link"></i>{% endif %}
+            {% if post.external_link %}<i class="icon-external-link-sign external"></i>{% endif %}
           </span>
-          <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
-        </h4>
+          <span class="large-3 columns date">{{ post.date | date: "%m/%d/%Y" }}</span>
+        </header>
         {% if post.image %}
           {% if post.external_link %}
             <a href="{{ post.external_link }}"><img src="{{ post.image }}"/></a>
@@ -21,7 +21,7 @@ layout: default
           {% endif %}
         {% endif %}
         <p>{{ post.excerpt }}</p>
-        {% if post.external_link == null %} <a href="{{ post.url }}">Continue reading <i class="icon-long-arrow-right"></i></a> {% endif %}
+        {% if post.external_link == null %} <a class="continue" href="{{ post.url }}">Continue reading <i class="icon-double-angle-right"></i></a> {% endif %}
       </li>
     {% endfor %}
   </ul>
@@ -31,17 +31,17 @@ layout: default
 <div class="pagination">
   {% if paginator.previous_page  %}
     {% if paginator.previous_page == 1 %}
-      <a href="/" class="previous"><i class="icon-long-arrow-left"></i></a>
+      <a href="/" class="previous"><i class="icon-circle-arrow-left"></i></a>
     {% else %}
-      <a href="/page{{ paginator.previous_page }}" class="previous"><i class="icon-long-arrow-left"></i> </a>
+      <a href="/page{{ paginator.previous_page }}" class="previous"><i class="icon-circle-arrow-left"></i> </a>
     {% endif %}
   {% else %}
-    <span class="previous"><i class="icon-long-arrow-left"></i></span>
+    <span class="previous"><i class="icon-circle-arrow-left"></i></span>
   {% endif %}
   <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next"><i class="icon-long-arrow-right"></i></a>
+    <a href="/page{{ paginator.next_page }}" class="next"><i class="icon-circle-arrow-right"></i></a>
   {% else %}
-    <span class="next "><i class="icon-long-arrow-right"></i></span>
+    <span class="next "><i class="icon-circle-arrow-right"></i></span>
   {% endif %}
 </div>

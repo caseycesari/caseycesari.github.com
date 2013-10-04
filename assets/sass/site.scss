@@ -28,10 +28,17 @@ ul {
 }
 
 #sidebar {
-  header {
-    padding-top: 0.5em;
+  position: fixed;
 
-    @media(max-width: 768px) {
+  @media(max-width: 767px) {
+    position: relative;
+  }
+
+  header {
+    font-family: didact-gothic, sans-serif;
+    padding-top: 0.2em;
+
+    @media(max-width: 767px) {
       padding-top: 0;
     }
 
@@ -42,13 +49,36 @@ ul {
 }
 
 .posts {
-  .date {
-    color: #aaa;
-    text-align: right;
+  header {
+    font-family: didact-gothic, sans-serif;
+    margin-bottom: 0.5em;
 
-    @media(max-width: 768px) {
-      text-align: left;
-      font-size: 16px;
+    .title {
+      font-family: didact-gothic, sans-serif;
+      font-size: 1.5em;
+      line-height: 1.25em;
+      padding-left: 0.64em;
+    }
+
+    .date {
+      color: #aaa;
+      float: right;
+      line-height: 1.8em;
+      font-size: 1.2em;
+      text-align: right;
+
+      @media(max-width: 767px) {
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+
+    .external {
+      font-size: 0.7em;
+      color: #aaa;
+      vertical-align: 4%;
+      position: relative;
+      display: inline-block;
     }
   }
 
@@ -56,18 +86,19 @@ ul {
     li {
       margin-bottom: 3em;
 
-      h4.row {
-        margin-bottom: 0.5em;
-
-        .icon-external-link {
-          font-size: 0.6em;
-          color: #aaa;
-        }
-      }
-
       img {
         border: 1px solid #ccc;
+        margin-top: 1.4em;
       }
+    }
+  }
+
+  .continue {
+    font-style: italic;
+    font-size: 0.95em;
+
+    i {
+      font-style: italic;
     }
   }
 }
@@ -110,11 +141,18 @@ ul {
   font-size: 1.5em;
   text-align: center;
 
-  @media(max-width: 768px) {
+  @media(max-width: 767px) {
     font-size: 1.2em;
   }
 
-  .previous i, .next i {
-    margin: 0 0.5em;
+  .previous, .next {
+    
+    i {
+      margin: 0 0.5em;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
