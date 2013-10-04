@@ -93,7 +93,7 @@ ul {
   text-align: center; }
   @media (max-width: 767px) {
     .pagination {
-      font-size: 1.2em; } }
+      font-size: 1.75em; } }
   .pagination .previous i, .pagination .next i {
     margin: 0 0.5em; }
   .pagination .previous:hover, .pagination .next:hover {
