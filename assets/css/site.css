@@ -100,7 +100,8 @@ ul {
 
 .archive .date {
   color: #ccc;
-  text-align: right; }
+  text-align: right;
+  margin-bottom: 0; }
 .archive ul li {
   margin-bottom: 1em; }
 
