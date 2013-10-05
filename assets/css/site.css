@@ -74,10 +74,29 @@ ul {
   .post img.featured {
     border: 1px solid #ccc;
     margin-bottom: 2em; }
+.post header h2 a {
+  font-weight: bold;
+  font-style: normal;
+  font-family: didact-gothic, sans-serif; }
+.post header h2 .external {
+  font-size: 0.5em;
+  color: #aaa;
+  vertical-align: 6%;
+  position: relative;
+  display: inline-block; }
 .post .date {
   color: #aaa;
   display: block;
   margin-bottom: 2em; }
+.post .post-nav {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95em; }
+  .post .post-nav a {
+    display: block;
+    margin: 1em 0; }
+  .post .post-nav i {
+    font-style: italic; }
 
 .archive .date {
   color: #ccc;

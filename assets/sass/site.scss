@@ -114,10 +114,43 @@ ul {
     }
   }
 
+  header {
+    h2 {
+      a {
+        font-weight: bold;
+        font-style: normal;
+        font-family: didact-gothic, sans-serif;
+      } 
+
+      .external {
+        font-size: 0.5em;
+        color: #aaa;
+        vertical-align: 6%;
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+
   .date {
     color: #aaa;
     display: block;
     margin-bottom: 2em;
+  }
+
+  .post-nav {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.95em;
+    
+    a {
+      display: block;
+      margin: 1em 0;
+    }
+
+    i {
+      font-style: italic;
+    }
   }
 }
 
@@ -146,7 +179,6 @@ ul {
   }
 
   .previous, .next {
-    
     i {
       margin: 0 0.5em;
     }

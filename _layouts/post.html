@@ -5,7 +5,7 @@ layout: default
   <div class="post">
     <header>
       {% if page.external_link %} 
-      	<h2><a href="{{ page.external_link }}">{{ page.title }} <i class="icon-external-link"></i></a></h2>
+      	<h2><a href="{{ page.external_link }}">{{ page.title }}</a> <i class="icon-external-link-sign external"></i></h2>
       {% else %}
       	<h2>{{ page.title }}</h2>
       {% endif %}
@@ -13,5 +13,13 @@ layout: default
     </header>
     {% if page.image %} <img class="featured" src="{{ page.image }}"/> {% endif %}
     <div>{{ content }}</div>
+    <nav class="post-nav">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}"><i class="icon-double-angle-left"></i> {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url }}">{{ page.next.title }} <i class="icon-double-angle-right"></i></a>
+      {% endif %}
+    </nav>
   </div>
 </article>
