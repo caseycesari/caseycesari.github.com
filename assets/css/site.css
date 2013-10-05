@@ -98,10 +98,15 @@ ul {
   .post .post-nav i {
     font-style: italic; }
 
+.archive a {
+  font-size: 1.2em;
+  font-family: didact-gothic, sans-serif; }
 .archive .date {
+  font-family: didact-gothic, sans-serif;
   color: #ccc;
   text-align: right;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 1.2em; }
 .archive ul li {
   margin-bottom: 1em; }
 

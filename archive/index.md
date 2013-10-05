@@ -8,10 +8,10 @@ layout: post
   <ul>
     {% for post in site.posts %}
       <li>
-        <h5 class="row">
+        <article class="row">
           <a href="{{ post.url }}" class="large-9 columns">{{ post.title }}</a>
           <span class="date large-3 columns">{{ post.date | date: "%m/%d/%Y" }}</span>
-        </h5>
+        </article>
       </li>
     {% endfor %}
   </ul>
