@@ -1,26 +1,45 @@
-body {
-  color: #333;
-}
+$primaryColor: #9E2B20;
+$secondaryColor: #9E2B20;
+$tertiaryColor: #888;
+$background: #fff;
+$primaryTextColor: #333;
+$headlineFont: didact-gothic, sans-serif;
+$bodyFont: source-sans-pro, sans-serif;
 
-p {
-  font-family: source-sans-pro, sans-serif;
+body {
+  color: $primaryTextColor;
+  background: $background;
+  font-family: $bodyFont;
 }
 
 a, a:link, a:visited, a:active {
-  font-family: source-sans-pro, sans-serif;
-  color: #FFA500;
+  font-family: $bodyFont;
+  color: $secondaryColor;
+
+  &.headline {
+    color: $primaryColor;
+    font-weight: normal;
+    font-family: $headlineFont;
+  }
 
   &:hover {
+    color: $primaryColor;
     text-decoration: underline;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: didact-gothic, sans-serif;
+  font-family: $headlineFont;
+  color: $primaryTextColor;
 }
 
 ul {
   list-style-type: none;
+}
+
+.date {
+  color: $tertiaryColor; 
+  font-family: $headlineFont;
 }
 
 #wrapper {
@@ -35,8 +54,7 @@ ul {
   }
 
   header {
-    font-family: didact-gothic, sans-serif;
-    padding-top: 0.2em;
+    font-family: $headlineFont;
 
     @media(max-width: 767px) {
       padding-top: 0;
@@ -46,22 +64,51 @@ ul {
       font-size: 27px;
     }
   }
+
+  nav a, nav a:link, nav a:visited, nav a:active {
+    color: $tertiaryColor;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  .social {
+    li {
+      display: inline-block;
+
+      a {
+        i {
+          color: $tertiaryColor;
+          font-size: 2em;
+          margin: 0 0.3em 0 0;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 .posts {
   header {
-    font-family: didact-gothic, sans-serif;
+    font-family: $headlineFont;
     margin-bottom: 0.5em;
 
     .title {
-      font-family: didact-gothic, sans-serif;
+      font-family: $headlineFont;
       font-size: 1.5em;
       line-height: 1.25em;
       padding-left: 0.64em;
     }
 
     .date {
-      color: #aaa;
       float: right;
       line-height: 1.8em;
       font-size: 1.2em;
@@ -75,7 +122,7 @@ ul {
 
     .external {
       font-size: 0.7em;
-      color: #aaa;
+      color: $tertiaryColor;
       vertical-align: 6%;
       position: relative;
       display: inline-block;
@@ -95,6 +142,7 @@ ul {
 
   .continue {
     font-style: italic;
+    font-weight: normal;
     font-size: 0.95em;
 
     i {
@@ -119,12 +167,12 @@ ul {
       a {
         font-weight: bold;
         font-style: normal;
-        font-family: didact-gothic, sans-serif;
+        font-family: $headlineFont;
       } 
 
       .external {
         font-size: 0.5em;
-        color: #aaa;
+        color: $tertiaryColor;
         vertical-align: 6%;
         position: relative;
         display: inline-block;
@@ -133,7 +181,6 @@ ul {
   }
 
   .date {
-    color: #aaa;
     display: block;
     margin-bottom: 2em;
   }
@@ -157,12 +204,10 @@ ul {
 .archive {
   a {
     font-size: 1.2em;
-    font-family: didact-gothic, sans-serif;
+    font-family: $headlineFont;
   }
 
   .date {
-    font-family: didact-gothic, sans-serif;
-    color: #ccc;
     text-align: right;
     margin-bottom: 0;
     font-size: 1.2em;
@@ -176,8 +221,8 @@ ul {
 }
 
 .pagination {
-  color: #444;
-  font-family: source-sans-pro, sans-serif;
+  color: $tertiaryColor;
+  font-family: $bodyFont;
   padding: 1em 1em 2em 1em;
   font-size: 1.5em;
   text-align: center;

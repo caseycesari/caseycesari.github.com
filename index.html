@@ -8,7 +8,7 @@ layout: default
       <li class="large-12 columns">
         <header class="row">
           <span class="large-9 columns title">
-            <a href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
+            <a class="headline" href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
             {% if post.external_link %}<i class="icon-external-link-sign external"></i>{% endif %}
           </span>
           <span class="large-3 columns date">{{ post.date | date: "%m/%d/%Y" }}</span>

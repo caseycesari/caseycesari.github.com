@@ -1,20 +1,29 @@
 body {
-  color: #333; }
-
-p {
+  color: #333333;
+  background: white;
   font-family: source-sans-pro, sans-serif; }
 
 a, a:link, a:visited, a:active {
   font-family: source-sans-pro, sans-serif;
-  color: #FFA500; }
+  color: #9e2b20; }
+  a.headline, a:link.headline, a:visited.headline, a:active.headline {
+    color: #9e2b20;
+    font-weight: normal;
+    font-family: didact-gothic, sans-serif; }
   a:hover, a:link:hover, a:visited:hover, a:active:hover {
+    color: #9e2b20;
     text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: didact-gothic, sans-serif; }
+  font-family: didact-gothic, sans-serif;
+  color: #333333; }
 
 ul {
   list-style-type: none; }
+
+.date {
+  color: #888888;
+  font-family: didact-gothic, sans-serif; }
 
 #wrapper {
   margin-top: 40px; }
@@ -25,13 +34,26 @@ ul {
     #sidebar {
       position: relative; } }
   #sidebar header {
-    font-family: didact-gothic, sans-serif;
-    padding-top: 0.2em; }
+    font-family: didact-gothic, sans-serif; }
     @media (max-width: 767px) {
       #sidebar header {
         padding-top: 0; } }
     #sidebar header .name a {
       font-size: 27px; }
+  #sidebar nav a, #sidebar nav a:link, #sidebar nav a:visited, #sidebar nav a:active {
+    color: #888888; }
+    #sidebar nav a:hover, #sidebar nav a:link:hover, #sidebar nav a:visited:hover, #sidebar nav a:active:hover {
+      color: #9e2b20; }
+  #sidebar .social li {
+    display: inline-block; }
+    #sidebar .social li a i {
+      color: #888888;
+      font-size: 2em;
+      margin: 0 0.3em 0 0; }
+      #sidebar .social li a i:hover {
+        color: #9e2b20; }
+    #sidebar .social li a:hover {
+      text-decoration: none; }
 
 .posts header {
   font-family: didact-gothic, sans-serif;
@@ -42,7 +64,6 @@ ul {
     line-height: 1.25em;
     padding-left: 0.64em; }
   .posts header .date {
-    color: #aaa;
     float: right;
     line-height: 1.8em;
     font-size: 1.2em;
@@ -53,7 +74,7 @@ ul {
         font-size: 16px; } }
   .posts header .external {
     font-size: 0.7em;
-    color: #aaa;
+    color: #888888;
     vertical-align: 6%;
     position: relative;
     display: inline-block; }
@@ -64,6 +85,7 @@ ul {
     margin-top: 1.4em; }
 .posts .continue {
   font-style: italic;
+  font-weight: normal;
   font-size: 0.95em; }
   .posts .continue i {
     font-style: italic; }
@@ -80,12 +102,11 @@ ul {
   font-family: didact-gothic, sans-serif; }
 .post header h2 .external {
   font-size: 0.5em;
-  color: #aaa;
+  color: #888888;
   vertical-align: 6%;
   position: relative;
   display: inline-block; }
 .post .date {
-  color: #aaa;
   display: block;
   margin-bottom: 2em; }
 .post .post-nav {
@@ -102,8 +123,6 @@ ul {
   font-size: 1.2em;
   font-family: didact-gothic, sans-serif; }
 .archive .date {
-  font-family: didact-gothic, sans-serif;
-  color: #ccc;
   text-align: right;
   margin-bottom: 0;
   font-size: 1.2em; }
@@ -111,7 +130,7 @@ ul {
   margin-bottom: 1em; }
 
 .pagination {
-  color: #444;
+  color: #888888;
   font-family: source-sans-pro, sans-serif;
   padding: 1em 1em 2em 1em;
   font-size: 1.5em;
