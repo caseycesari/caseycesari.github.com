@@ -1,5 +1,5 @@
 body {
-  color: #333333;
+  color: #444444;
   background: white;
   font-family: source-sans-pro, sans-serif; }
 
@@ -16,7 +16,7 @@ a, a:link, a:visited, a:active {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Didact Gothic", sans-serif;
-  color: #333333; }
+  color: #444444; }
 
 ul {
   list-style-type: none; }
@@ -50,6 +50,9 @@ ul {
       color: #888888;
       font-size: 2em;
       margin: 0 0.3em 0 0; }
+      @media (min-width: 768px) and (max-width: 950px) {
+        #sidebar .social li a i {
+          font-size: 1.6em; } }
       #sidebar .social li a i:hover {
         color: #9e2b20; }
     #sidebar .social li a:hover {
