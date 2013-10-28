@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning news design fundamentals at Inquirer
+title: Learning news design fundamentals at the Inquirer
 image: '/assets/img/posts/inky-graphics.png'
 categories: [blog]
 ---
