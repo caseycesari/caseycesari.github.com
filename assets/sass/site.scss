@@ -1,5 +1,5 @@
-$primaryColor: #9E2B20;
-$secondaryColor: #9E2B20;
+$primaryColor: #FFA500;
+$secondaryColor: #FFA500;
 $tertiaryColor: #888;
 $background: #fff;
 $primaryTextColor: #444;
@@ -31,6 +31,8 @@ a, a:link, a:visited, a:active {
 h1, h2, h3, h4, h5, h6 {
   font-family: $headlineFont;
   color: $primaryTextColor;
+  font-weight: 500;
+  margin-top: -0.2em;
 }
 
 ul {
@@ -113,10 +115,9 @@ ul {
     }
 
     .date {
-      float: right;
-      line-height: 1.8em;
-      font-size: 1.2em;
-      text-align: right;
+      line-height: 1.5em;
+      font-size: 1.0em;
+      font-weight: 300;
 
       @media(max-width: 767px) {
         text-align: left;
@@ -139,7 +140,7 @@ ul {
 
       img {
         border: 1px solid #ccc;
-        margin-top: 1.4em;
+        margin-top: 0.5em;
       }
     }
   }

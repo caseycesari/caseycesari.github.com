@@ -6,12 +6,16 @@ layout: default
   <ul class="row">
     {% for post in paginator.posts %}
       <li class="large-12 columns">
-        <header class="row">
-          <span class="large-9 columns title">
-            <a class="headline" href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
-            {% if post.external_link %}<i class="icon-external-link-sign external"></i>{% endif %}
-          </span>
-          <span class="large-3 columns date">{{ post.date | date: "%m/%d/%Y" }}</span>
+        <header>
+          <div class="row">
+            <span class="large-12 columns date">{{ post.date | date: "%B %d, %Y" }}</span>
+          </div>
+          <div class="row">
+            <span class="large-12 columns title">
+              <a class="headline" href="{% if post.external_link %} {{ post.external_link }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a>
+              {% if post.external_link %}<i class="icon-external-link-sign external"></i>{% endif %}
+            </span>
+          </div>
         </header>
         {% if post.image %}
           {% if post.external_link %}
