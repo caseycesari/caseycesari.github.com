@@ -9,13 +9,13 @@ a, a:link, a:visited, a:active {
   a.headline, a:link.headline, a:visited.headline, a:active.headline {
     color: #9e2b20;
     font-weight: normal;
-    font-family: "Didact Gothic", sans-serif; }
+    font-family: "adelle", sans-serif; }
   a:hover, a:link:hover, a:visited:hover, a:active:hover {
     color: #9e2b20;
     text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Didact Gothic", sans-serif;
+  font-family: "adelle", sans-serif;
   color: #444444; }
 
 ul {
@@ -23,7 +23,7 @@ ul {
 
 .date {
   color: #888888;
-  font-family: "Didact Gothic", sans-serif; }
+  font-family: "adelle", sans-serif; }
 
 #wrapper {
   margin-top: 40px; }
@@ -34,7 +34,7 @@ ul {
     #sidebar {
       position: relative; } }
   #sidebar header {
-    font-family: "Didact Gothic", sans-serif; }
+    font-family: "adelle", sans-serif; }
     @media (max-width: 767px) {
       #sidebar header {
         padding-top: 0; } }
@@ -59,10 +59,10 @@ ul {
       text-decoration: none; }
 
 .posts header {
-  font-family: "Didact Gothic", sans-serif;
+  font-family: "adelle", sans-serif;
   margin-bottom: 0.5em; }
   .posts header .title {
-    font-family: "Didact Gothic", sans-serif;
+    font-family: "adelle", sans-serif;
     font-size: 1.5em;
     line-height: 1.25em;
     padding-left: 0.64em; }
@@ -102,7 +102,7 @@ ul {
 .post header h2 a {
   font-weight: bold;
   font-style: normal;
-  font-family: "Didact Gothic", sans-serif; }
+  font-family: "adelle", sans-serif; }
 .post header h2 .external {
   font-size: 0.5em;
   color: #888888;
@@ -124,7 +124,7 @@ ul {
 
 .archive a {
   font-size: 1.2em;
-  font-family: "Didact Gothic", sans-serif; }
+  font-family: "adelle", sans-serif; }
 .archive .date {
   text-align: right;
   margin-bottom: 0;
