@@ -1,0 +1,8 @@
+html, body, div {
+	width: 100%; margin: 0; float: none;
+}
+
+li {
+	font-size: 11px;
+	line-height: 1.4em;
+}
