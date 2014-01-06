@@ -5,4 +5,5 @@ external_link: http://www.philly.com/philly/business/20131223_Long-awaited_chang
 categories: [blog]
 ---
 
-Jeff Gammage looks into how immigrants from Mexico and Vietnam are creating a more diverse Italian Market. I used current and historical Census data to analyze demographic changes in the area.
+Jeff Gammage looks into how immigrants from Mexico and Vietnam are creating a more diverse Italian Market.
+I analyzed current and historical Census data to quantify demographic changes in the area surrounding the Market and in South Philly.
