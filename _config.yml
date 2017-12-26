@@ -3,6 +3,6 @@ lsi:         false
 port: 4000
 permalink: /:year/:month/:day/:title.html
 url:         http://www.cpt.ph
-pygments: true
+highlighter: rouge
 paginate: 10
 markdown: kramdown
