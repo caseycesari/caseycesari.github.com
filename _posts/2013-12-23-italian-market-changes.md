@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Inquirer: Long-awaited change coming to Italian Market"
-external_link: http://www.philly.com/philly/business/20131223_Long-awaited_change_coming_to_Italian_Market.html
+external_link: https://www.inquirer.com/philly/business/20131223_Long-awaited_change_coming_to_Italian_Market.html
 categories: [blog]
 ---
 
