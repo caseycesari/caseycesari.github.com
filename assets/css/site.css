@@ -9,13 +9,13 @@ a, a:link, a:visited, a:active {
   a.headline, a:link.headline, a:visited.headline, a:active.headline {
     color: orange;
     font-weight: normal;
-    font-family: "adelle", sans-serif; }
+    font-family: "lato", sans-serif; }
   a:hover, a:link:hover, a:visited:hover, a:active:hover {
     color: orange;
     text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "adelle", sans-serif;
+  font-family: "lato", sans-serif;
   color: #444444;
   font-weight: 500;
   margin-top: -0.2em; }
@@ -25,7 +25,7 @@ ul {
 
 .date {
   color: #888888;
-  font-family: "adelle", sans-serif; }
+  font-family: "lato", sans-serif; }
 
 #wrapper {
   margin-top: 40px; }
@@ -36,7 +36,7 @@ ul {
     #sidebar {
       position: relative; } }
   #sidebar header {
-    font-family: "adelle", sans-serif; }
+    font-family: "lato", sans-serif; }
     @media (max-width: 767px) {
       #sidebar header {
         padding-top: 0; } }
@@ -61,10 +61,10 @@ ul {
       text-decoration: none; }
 
 .posts header {
-  font-family: "adelle", sans-serif;
+  font-family: "lato", sans-serif;
   margin-bottom: 0.5em; }
   .posts header .title {
-    font-family: "adelle", sans-serif;
+    font-family: "lato", sans-serif;
     font-size: 1.5em;
     line-height: 1.25em;
     padding-left: 0.64em; }
@@ -103,7 +103,7 @@ ul {
 .post header h2 a {
   font-weight: bold;
   font-style: normal;
-  font-family: "adelle", sans-serif; }
+  font-family: "lato", sans-serif; }
 .post header h2 .external {
   font-size: 0.5em;
   color: #888888;
@@ -125,7 +125,7 @@ ul {
 
 .archive a {
   font-size: 1.2em;
-  font-family: "adelle", sans-serif; }
+  font-family: "lato", sans-serif; }
 .archive .date {
   text-align: right;
   margin-bottom: 0;
