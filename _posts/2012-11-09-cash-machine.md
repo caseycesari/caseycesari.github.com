@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AxisPhilly: Uneven Burden"
-external_link: http://apps.axisphilly.org/forfeiture/
+external_link: https://axisphilly-archive.s3.amazonaws.com/forfeiture/index.html
 image: '/assets/img/posts/uneven-burden.png'
 categories: [blog]
 ---
