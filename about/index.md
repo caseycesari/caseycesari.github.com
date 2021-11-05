@@ -1,10 +1,9 @@
 ---
 layout: post
 title: About
-date: 2013-12-03
+date: 2021-11-05
 ---
-I'm a freelance news developer based out of Philadelphia. Previously, I was the news applications editor at AxisPhilly.
 
-My work has been published on <a href="http://www.axisphilly.org">AxisPhilly.org</a>, <a href="http://www.philly.com">Philly.com</a>, <a href="http://www.PhillyDailyNews.com">PhillyDailyNews.com</a>, <a href="http://www.inquirer.com">Inquirer.com</a>, <a href="http://www.citypaper.net">CityPaper.net</a>, <a href="http://www.newsworks.org">NewsWorks.org</a>, <a href="http://www.planphilly.org">PlanPhilly.org</a> and in The Philadelphia Inquirer, the Philadelphia Daily News and the Philadelphia City Paper.
+I'm a software engineer at [Azavea](https://www.azavea.com/), where I work with water resource and environmental organizations to build geospatial web applications.
 
 *This site is hosted on [Github Pages](http://pages.github.com/) and is powered by [Jekyll](https://github.com/mojombo/jekyll).*
