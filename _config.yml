@@ -1,8 +1,12 @@
 destination: ./_site
-lsi:         false
+lsi: false
 port: 4000
 permalink: /:year/:month/:day/:title.html
-url:         http://caseycesari.github.io/
+url: http://caseycesari.github.io/
 highlighter: rouge
 paginate: 10
 markdown: kramdown
+plugins: [jekyll-paginate]
+sass:
+    sass_dir: assets/sass
+    style: compressed

@@ -24,8 +24,7 @@ layout: default
             <img src="{{ post.image }}"/>
           {% endif %}
         {% endif %}
-        <p>{{ post.excerpt }}</p>
-        {% if post.external_link == null %} <a class="continue" href="{{ post.url }}">Continue reading <i class="icon-double-angle-right"></i></a> {% endif %}
+        {% if post.excerpt %}{{ post.excerpt }}{% endif %}
       </li>
     {% endfor %}
   </ul>

@@ -27,7 +27,7 @@ Postgres
 
 Also, since there is no .yml for a Django project, you'll need to use the database URL parameters for all of the Taps commands or create a .yml file. For my project, I was using Postgres, so I'll use those for the examples. The mysql database URL structure is a little different. See the Heroku Taps [article][3] for an example.
 
-####Push local database to Heroku
+#### Push local database to Heroku
 
 This will overwrite your database on Heroku. Adding the confirm parameter will skip the confirmation from Heroku. If you want to play it safe and make this a two-step process, leave it off.
 
@@ -35,7 +35,7 @@ This will overwrite your database on Heroku. Adding the confirm parameter will s
     $ heroku db:push postgres://user:pass@localhost/database_name --confirm your-heroku-app-name-here
     {% endhighlight %}
 
-####Backing up Heroku database
+#### Backing up Heroku database
 
 First, create a local database to store the backup tables in:
   
@@ -49,7 +49,7 @@ Then, run:
     $ heroku db:pull postgres://user:pass@localhost/backup_database_name
     {% endhighlight %}
 
-####Modifying the schema of the Heroku database
+#### Modifying the schema of the Heroku database
 
 I highly recommend using [South][5] for database migrations in Django. With South, you'll be able to make and keep track of changes to all of your app's models pretty easily. Follow this [tutorial][6] to get started.
 
@@ -59,7 +59,7 @@ Once you have South up and running locally, you can update the Heroku database s
     $ heroku run python project_name/manage.py migrate app_name
     {% endhighlight %}
 
-####Use a remote database for your Heroku app
+#### Use a remote database for your Heroku app
 
 When you are ready to move your database off Heroku (I think you can find a better deal on a cloud database than using the Heroku options), you'll need to modify your settings.py to point to a remote server. After getting your remote DB up and running, run this command
 

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Archive
-layout: post
 ---
 
 <div class="archive">

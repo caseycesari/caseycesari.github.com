@@ -1,9 +1,9 @@
-$primaryColor: #FFA500;
-$secondaryColor: #FFA500;
-$tertiaryColor: #888;
-$background: #fff;
-$primaryTextColor: #444;
-$headlineFont: "lato", sans-serif;
+$primaryColor: #8dac9c;
+$secondaryColor: #8dac9c;
+$tertiaryColor: #222;
+$background: #f5f4ee;
+$primaryTextColor: #333;
+$headlineFont: "Avenir", sans-serif;
 $bodyFont: source-sans-pro, sans-serif;
 
 body {
@@ -18,7 +18,7 @@ a, a:link, a:visited, a:active {
 
   &.headline {
     color: $primaryColor;
-    font-weight: normal;
+    font-weight: 500;
     font-family: $headlineFont;
   }
 
@@ -64,6 +64,9 @@ ul {
 
     .name a {
       font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: block;
     }
   }
 
@@ -105,7 +108,6 @@ ul {
 .posts {
   header {
     font-family: $headlineFont;
-    margin-bottom: 0.5em;
 
     .title {
       font-family: $headlineFont;
@@ -136,11 +138,11 @@ ul {
 
   ul {
     li {
-      margin-bottom: 3em;
+      margin-bottom: 1em;
 
       img {
         border: 1px solid #ccc;
-        margin-top: 0.5em;
+        margin: 10px 0;
       }
     }
   }
@@ -245,4 +247,11 @@ ul {
       text-decoration: none;
     }
   }
+}
+
+.logo {
+  width: 25%;
+  display: block;
+  border-radius: 50%;
+  margin: 10px 0px;
 }

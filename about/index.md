@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: About
 date: 2021-11-05
 ---

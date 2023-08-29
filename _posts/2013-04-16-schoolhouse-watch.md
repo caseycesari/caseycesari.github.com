@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "AxisPhilly: Schoolhouse Watch"
-external_link: http://schoolhousewatch.axisphilly.org/
 categories: [blog]
 ---
 
