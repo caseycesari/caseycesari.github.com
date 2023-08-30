@@ -1,6 +1,6 @@
 $primaryColor: #8dac9c;
 $secondaryColor: #8dac9c;
-$tertiaryColor: #222;
+$tertiaryColor: #555;
 $background: #f5f4ee;
 $primaryTextColor: #333;
 $headlineFont: "Avenir", sans-serif;
@@ -231,7 +231,7 @@ ul {
   color: $tertiaryColor;
   font-family: $bodyFont;
   padding: 1em 1em 2em 1em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 
   @media(max-width: 767px) {

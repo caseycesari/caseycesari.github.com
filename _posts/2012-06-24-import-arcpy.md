@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Import Arcpy
+image: "/assets/img/posts/streets-repeat.png"
 categories: [blog]
 ---
 
