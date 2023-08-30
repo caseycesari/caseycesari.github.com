@@ -229,18 +229,19 @@ ul {
 
 .pagination {
   color: $tertiaryColor;
-  font-family: $bodyFont;
+  font-family: $headlineFont;
   padding: 1em 1em 2em 1em;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
 
-  @media(max-width: 767px) {
-    font-size: 1.75em;
+  .page_number {
+    vertical-align: middle;
   }
 
   .previous, .next {
     i {
       margin: 0 0.5em;
+      vertical-align: middle;
     }
 
     &:hover {
